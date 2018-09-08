@@ -1,0 +1,44 @@
+> substr(s,pos,len) : extracts a substring from 's' starting from position 'pos' upto lenght 'len'.
+>soundex(s): Translates a source string into its SOUNDEX code.the first letter remains
+                       unchanged.Translation is performed for each letter until three
+	    digits are generated. If any letters exist beyond that, they are ignored.
+
+Mathematical Functions:
+>round(n,i) : where i is optional and default is 0.
+>trunc(n,i) : it “rounds” toward zero.
+>remainder(n1,n2): identifies the closest multiple of n2. If the multiple is higher, 	REMAINDER returns a negative number to indicate that the closest multiple of 	n2 is higher than n1.
+>mod(n1,n2)
+
+Date related functions:
+>sysdate : returns current date.
+>round(d,i): d is rounded off to the nearest date value, at a level of detail specified by i.
+>trunc(d,i): same as round(),except TRUNC always rounds down.
+>NEXT_DAY(d, c) : Returns a valid date representing the first occurrence of the c day
+		following the date represented in d.
+>LAST_DAY(d): Returns the last day of the month in which d falls.
+>ADD_MONTHS(d, n): Adds n months to d
+> Months_Between(d1,d2): returns the month between the 2 dates. where d1 > d2 for 		        positive results.
+>NUMTOYMINTERVAL (n, interval_unit) : convert n to years where interval_unit can be either 'Year' or 'Month' which specify where the given 'n' is given in month or year.
+It gives a value in the INTERVAL YEAR TO MONTH datatype.
+ex: NUMTOYMINTERVAL(27,'MONTH') => 2-3
+      NUMTOYMINTERVAL(27,'YEAR') => 27-0
+> NUMTODSINTERVAL (n, interval_unit): It gives a value of the datatype INTERVAL DAY TO SECOND.
+
+Other function:
+>NVL(e1, e2): If e1 has a value of NULL, then NVL returns the value for e2. Otherwise
+it returns e1.
+>DECODE(e, search_expression, d) : if e equals se1,then DECODE should return se2. Otherwise, it should return d. If d is omitted,DECODE will return NULL.
+In DECODE, two NULL values are considered to be equivalent.
+>Case :
+ syntax: CASE expression1 WHEN condition1 THEN result1 WHEN condition2
+THEN result2 . . . ELSE resultfinal END
+If no values match and no ELSE clause is included, NULL is returned.
+>NULLIF(e1, e2): If e1 and e2 are the same, NULLIF returns NULL. Otherwise, it returns e1.
+The NULLIF function helps filter out only those values that represent changes to the older original values.
+
+Conversion Functions:
+>to_number(e1, format_model, nls_parms): Transform e1 from an expression, perhaps a character string, into a numeric value.
+>TO_CHAR(c): Transforms an NCHAR, an NVARCHAR2, a CLOB, or an NCLOB into a VARCHAR2.
+>TO_CHAR(n, format_model, nls_parms): Transforms n into a character string, using the optional format model.
+>
+numeric value
